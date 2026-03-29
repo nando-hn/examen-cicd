@@ -1,0 +1,21 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy
+        run: echo "Simulando deploy"
+
+      - name: Uso de secrets
+        run: echo "Deploy seguro"
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
