@@ -39,6 +39,20 @@ Los pipelines CI y CD se ejecutaron correctamente en GitHub Actions.
 ## Autor
 Luis García - 614111051
 
+## Preguntas conceptuales
+
+**1. Diferencia entre CI y CD**
+CI automatiza pruebas del código, mientras que CD automatiza su despliegue.
+
+**2. Self-hosted runner**
+Es un servidor propio que ejecuta workflows cuando se necesita mayor control o recursos específicos.
+
+**3. GitHub environments**
+Permiten gestionar despliegues por entorno y usar secrets específicos.
+
+**4. Rollback strategy**
+Es volver a una versión anterior si un despliegue falla.
+
 ## Troubleshooting
 
 ### Snippet 1 - Error de triggers
