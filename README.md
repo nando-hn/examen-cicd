@@ -38,3 +38,39 @@ Los pipelines CI y CD se ejecutaron correctamente en GitHub Actions.
 
 ## Autor
 Luis García - 614111051
+
+## Troubleshooting
+
+### Snippet 1 - Error de triggers
+
+Error:
+La sintaxis de "on" estaba incorrecta.
+
+Corrección:
+```yaml
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, develop]
+
+
+    Snippet 2 - Error en secrets
+
+Error:
+Se utilizaba mal la referencia a secrets.
+
+Corrección:
+
+run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+
+Snippet 3 - Error en matrix y cache
+
+Error:
+Matrix mal definida y cache mal configurado.
+
+Corrección:
+
+strategy:
+  matrix:
+    node-version: [16.x, 18.x]
