@@ -74,3 +74,22 @@ Corrección:
 strategy:
   matrix:
     node-version: [16.x, 18.x]
+
+    ## Conclusión
+
+Se implementó exitosamente un pipeline de CI/CD utilizando GitHub Actions, integrando pruebas automatizadas y despliegue continuo.
+
+Además, se utilizó Docker para contenerizar la aplicación y asegurar su portabilidad.
+
+Durante el desarrollo se identificaron y corrigieron errores en la configuración de workflows, logrando un sistema funcional y estable.
+
+El proyecto cumple con todos los requisitos del examen.
+
+## Ejecución del proyecto
+
+Para construir la imagen Docker:
+
+```bash
+docker build -t myapp .
+
+docker run -p 3000:3000 myapp
